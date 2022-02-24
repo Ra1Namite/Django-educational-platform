@@ -1,6 +1,5 @@
 from django.shortcuts import redirect, get_object_or_404
-
-from app.students.forms import CourseEnrollForm
+from students.forms import CourseEnrollForm
 from .models import Course, Module, Content, Subject
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy
