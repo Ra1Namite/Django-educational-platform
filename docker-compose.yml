@@ -12,6 +12,7 @@ services:
       - ./app/.env.dev
     depends_on:
       - web-db 
+      - cache 
       
 
   web-db:
@@ -27,6 +28,10 @@ services:
     image: memcached
     ports:
       - "11211:11211"
+    entrypoint: 
+      - memcached 
+      - -m 64
+      
     
 
 
