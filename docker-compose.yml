@@ -32,7 +32,16 @@ services:
       - memcached 
       - -m 64
       
+  redis:
+    image: redis:6-alpine 
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server 
     
+    
+
+
 
 
 volumes:
